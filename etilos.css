@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     height: 100vh;
 }
 
@@ -63,7 +63,7 @@ img {
 
 .textos h1 {
     font-size: 60px;
-    animation: moverDerecha 1s ease-in
+    animation: moverDerecha 1s ease-in;
 }
 
 .textos h2 {
@@ -75,16 +75,17 @@ img {
 
 .textos a {
     display: inline-block;
-    color: white;
+    color: #00477f;
     font-weight: 300px;
     text-decoration: none;
     margin-top: 30px;
-    border: 2px solid #00477f;
+    border: 8px solid white;
     width: 150px;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
     padding: 10px 0;
     animation: arriba 1s ease-in;
+    font-size: 20px;
 }
 
 .wave {
@@ -107,19 +108,67 @@ img {
     flex-direction: column;
     width: 100%;
     transition: all 1s ease;
-    background: #1D976C;
-    background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);
-    background: linear-gradient(to right, #93F9B9, #1D976C);
+    background: #1d976c;
+    background: -webkit-linear-gradient(to right, #93f9b9, #1d976c);
+    background: linear-gradient(to right, #93f9b9, #1d976c);
 }
 
 .uno {
-    -webkit-clip-path: circl(0% at 00);
+    -webkit-clip-path: circle(0% at 00);
     clip-path: circle(0% at 0 0);
 }
 
 .dos {
-    -webkit-clip-path: circl(150% at 00);
-    clip-path: circle(150% at 0 0);
+    -webkit-clip-path: circle(150% at 00);
+    clip-path: circle(150% at 00);
+}
+
+.sobre-mi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-bottom: 120px;
+}
+
+.lolita {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin-right: 50px;
+}
+
+.txt-sobre-mi {
+    text-align: center;
+}
+
+.txt-sobre-mi h1 {
+    color: #00477f;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.txt-sobre-mi p {
+    color: white;
+    font-family: "Jost", sans-serif;
+    font-size: 20px;
+    margin-bottom: 70px;
+    padding: 20px;
+    width: 600px;
+}
+
+.txt-sobre-mi a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 23px;
+}
+
+.proyect {
+    width: 150px;
+    height: 40px;
+    color: white;
+    background-color: #00477f;
+    color: white;
 }
 
 @keyframes moverIzquierda {
@@ -155,37 +204,59 @@ img {
     }
 }
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width: 1000px) {
     img {
         height: 400px;
     }
-}
-
-@media screen and (max-width:800px) {
-    img {
-        height: 370px;
+    .texto {
+        margin-right: 30px;
     }
     .textos h1 {
-        font-size: 60px;
+        font-size: 50px;
     }
     .textos h2 {
-        font-size: 15px;
+        font-size: 20px;
     }
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width: 800px) {
     img {
-        height: 250px;
+        height: 320px;
     }
     .textos h1 {
-        font-size: 40px;
+        font-size: 43px;
     }
     .textos h2 {
-        font-size: 10px;
+        font-size: 11px;
     }
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width: 700px) {
+    .container {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    img {
+        height: 230px;
+    }
+    .textos {
+        width: 100%;
+        text-align: center;
+    }
+    .textos h1 {
+        font-size: 35px;
+    }
+    .textos h2 {
+        font-size: 25px;
+    }
+    .icono {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 450px) {
     .container {
         width: 100%;
         flex-wrap: wrap;
@@ -196,24 +267,141 @@ img {
         text-align: center;
     }
     .textos h1 {
-        font-size: 60px;
+        font-size: 40px;
+        margin-top: 12px;
     }
     .textos h2 {
         font-size: 25px;
     }
+    .icono {
+        font-size: 20px;
+    }
+    .container h1 {
+        line-height: 40px;
+    }
+    .img {
+        height: 260px;
+    }
 }
 
-@media screen and (max-width:340px) {
+@media screen and (max-width: 340px) {
     img {
-        height: 160px;
+        height: 260px;
     }
     .textos h1 {
-        font-size: 35px;
+        font-size: 30px;
+        margin-top: 10px;
     }
     .textos a {
-        width: 120px;
+        width: 100px;
     }
     .textos h2 {
-        font-size: 15px;
+        font-size: 20px;
+    }
+    .icono {
+        font-size: 17px;
     }
 }
+
+
+/* BOTON Proyecto */
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveOut 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveOut {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.btn::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 6px solid #fff;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+
+.btn:hover::after,
+.btn:focus::after {
+    animation: none;
+    display: none;
+}
+
+@keyframes ring {
+    0% {
+        width: 20px;
+        height: 20px;
+        opacity: 1;
+    }
+    100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
+}
+
+
+/* FIN BOTON Proyecto */
