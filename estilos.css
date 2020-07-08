@@ -99,6 +99,23 @@ img {
 .row-relleno {
     width: 200;
 }
+.mail {
+    display: flex;
+    justify-content: center;
+}
+
+.mail img {
+    height: 30px;
+    margin-right: 7px;
+    animation: arriba 1s ease-in;
+}
+
+.mail p {
+    color: #00477f;
+    font-size: 19px;
+    font-weight: 700;
+    animation: arriba 1s ease-in;
+}
 
 .textos h1 {
     font-size: 60px;
@@ -116,10 +133,14 @@ img {
 
 .wave {
     height: 90px;
+    z-index: -1 !important;
     width: 100%;
     background: #a8ff78;
     background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);
     background: linear-gradient(to right, #78ffd6, #a8ff78);
+}
+.wave path {
+    z-index: -1;
 }
 
 .enlaces {
@@ -166,6 +187,10 @@ img {
 
 .txt-sobre-mi {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column;
 }
 
 .txt-sobre-mi h1 {
@@ -243,9 +268,18 @@ img {
     .textos h2 {
         font-size: 20px;
     }
+    .txt-sobre-mi h1 {
+        font-size: 30px;
+    }
+    .txt-sobre-mi p {
+        font-size: 21px;
+        margin: 0 5px 0 5px;
+        padding: 0;
+        width: auto;
+    }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     img {
         height: 320px;
     }
@@ -258,9 +292,38 @@ img {
     .botones-redes{ 
         margin-top: 20px;
     }
+    .sobre-mi {
+        flex-direction: column;
+        margin-left: 0;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+
+    }
+    .lolita {
+        width: 300px;
+        height: 300px;
+        margin-right: 0;
+        margin-top: -40px;
+        margin-bottom: 2px;
+    }
+    .txt-sobre-mi h1 {
+        font-size: 31px;
+    }
+    .txt-sobre-mi p {
+        font-size: 22px;
+        margin: 0 5px 0 5px;
+        padding: 0;
+        width: auto;
+    }
+    .txt-sobre-mi .btn-proyecto-contenedor {
+        text-align: start;
+        margin-top: 5px;
+        margin-left: 80px;
+    }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 640px) {
     .container {
         width: 100%;
         flex-wrap: wrap;
@@ -289,9 +352,57 @@ img {
     .botones-redes a {
         margin-right: 40px;
     }
+    .mail img {
+        height: 10px;
+        margin-right: 7px;
+    }
+    
+    .mail p {
+        font-size: 14px;
+    }
+    .row-icon {
+        height: 50px;
+    }
+    .botones-redes {
+        margin-top: -25px;
+    }
+    .botones-redes a img{
+        height: 30px;
+        width: 30px;
+    }
+    .sobre-mi {
+        flex-direction: column;
+        margin-left: 0;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+
+    }
+    .lolita {
+        width: 245px;
+        height: 245px;
+        margin-right: 0;
+        margin-top: -40px;
+        margin-bottom: 2px;
+    }
+    .txt-sobre-mi h1 {
+        font-size: 31px;
+    }
+    .txt-sobre-mi p {
+        font-size: 22px;
+        margin: 0 5px 0 5px;
+        padding: 0;
+        width: auto;
+    }
+    .txt-sobre-mi .btn-proyecto-contenedor {
+        text-align: start;
+        margin-top: 5px;
+        margin-left: 80px;
+    }
+
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 360px) {
     .container {
         width: 100%;
         flex-wrap: wrap;
@@ -328,6 +439,57 @@ img {
         height: 35px;
         width: 35px;
     }
+    .mail {
+        margin-top: 10px;
+    }
+    .mail img {
+        height: 20px;
+        margin-right: 7px;
+    }
+    
+    .mail p {
+        font-size: 14px;
+    }
+    .row-icon {
+        height: 50px;
+    }
+    .botones-redes {
+        margin-top: -5px;
+    }
+    .botones-redes a img{
+        height: 30px;
+        width: 30px;
+    }
+    .sobre-mi {
+        flex-direction: column;
+        margin-left: 0;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+
+    }
+    .lolita {
+        width: 200px;
+        height: 200px;
+        margin-right: 0;
+        margin-top: -40px;
+        margin-bottom: 5px;
+    }
+    .txt-sobre-mi h1 {
+        font-size: 28px;
+    }
+    .txt-sobre-mi p {
+        font-size: 21px;
+        margin: 0 5px 0 5px;
+        padding: 0;
+        width: auto;
+    }
+    .txt-sobre-mi .btn-proyecto-contenedor {
+        text-align: start;
+        margin-top: 10px;
+        margin-left: 65px;
+    }
+
  
 }
 
@@ -355,11 +517,56 @@ img {
         height: 35px;
         width: 35px;
     }
-   
-   
+    .mail img {
+        height: 20px;
+        margin-right: 7px;
+    }
+    
+    .mail p {
+        font-size: 14px;
+    }
+    .row-icon {
+        height: 50px;
+    }
+    .botones-redes {
+        margin-top: -25px;
+    }
+    .botones-redes a img{
+        height: 30px;
+        width: 30px;
+    }
+
+    .sobre-mi {
+        flex-direction: column;
+        margin-left: 0;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+
+    }
+    .lolita {
+        width: 150px;
+        height: 150px;
+        margin-right: 0;
+        margin-top: -40px;
+    }
+    .txt-sobre-mi h1 {
+        font-size: 25px;
+    }
+    .txt-sobre-mi p {
+        font-size: 20px;
+        margin: 0 5px 0 5px;
+        padding: 0;
+        width: auto;
+    }
+    .txt-sobre-mi .btn-proyecto-contenedor {
+        text-align: start;
+        margin-top: 10px;
+        margin-left: 40px;
+    }
+
+
 }
-
-
 /* BOTON Proyecto */
 
 .btn:link,
@@ -461,3 +668,6 @@ img {
 
 
 /* FIN BOTON Proyecto */
+
+
+
