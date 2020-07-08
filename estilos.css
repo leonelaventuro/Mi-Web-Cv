@@ -60,7 +60,22 @@ img {
     width: 50%;
     color: white;
 }
-
+.botones-redes{
+    display: flex;
+    justify-content: space-around;
+    margin-right: 470px;
+    margin-top: -30px;
+    margin-left: 40px;
+}
+.botones-redes a img{
+   
+    height: 40px;
+    width: 40px;
+}
+.botones-redes a img:hover{
+    height: 45px;
+    width: 45px;
+}
 .textos h1 {
     font-size: 60px;
     animation: moverDerecha 1s ease-in;
@@ -71,21 +86,6 @@ img {
     color: #00477f;
     margin-top: 20px;
     animation: moverIzquierda 1s ease-in;
-}
-
-.textos a {
-    display: inline-block;
-    color: #00477f;
-    font-weight: 300px;
-    text-decoration: none;
-    margin-top: 30px;
-    border: 8px solid white;
-    width: 150px;
-    border-radius: 10px;
-    text-align: center;
-    padding: 10px 0;
-    animation: arriba 1s ease-in;
-    font-size: 20px;
 }
 
 .wave {
