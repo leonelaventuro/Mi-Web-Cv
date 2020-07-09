@@ -2,13 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 62,5% (1rem = 10px);
 }
 
 body {
     font-family: "Open Sans", sans-serif;
     height: 100vh;
+    background: linear-gradient(to right, #a2d396, #3ca59d);
 }
-
+header {
+    background: linear-gradient(to right,  #98cf8a, #33a89e));
+    width: 100%;
+    height: 82vh;
+    display: flex;
+    align-items: center;
+}
+.relleno-nav {
+    height: 10px;
+}
+/* SOBRE MI */
 nav {
     position: fixed;
     top: 20px;
@@ -21,57 +33,179 @@ nav a {
     color: white;
     text-decoration: none;
 }
-
-.icono {
+.sobreMi {
     display: block;
     color: #00477f;
-    font-size: 25px;
+    font-size: 1.2rem;
     font-weight: bold;
     z-index: 100000000;
     animation: moverIzquierda 1s ease-in;
+
+}
+.btn-sobremi {
+ padding: 0.4rem 1.6rem;
+ border: 0.1rem solid rgba(71, 160, 152, 0.2); 
+ border-radius: 2rem;
+ font-size: 1.2rem;
+ background:rgba(112,188,154,0.2);
 }
 
-header {
-    background: #a8ff78;
-    background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);
-    background: linear-gradient(to right, #78ffd6, #a8ff78);
-    padding: 48px;
-    width: 100%;
-    height: 80vh;
+/* TOOLTIP */
+[tooltip] {
+    position: relative;
 }
+  [tooltip]::before,
+  [tooltip]::after {
+    font-size: .4em; 
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    opacity: 1;
+    animation-name:	flecha;
+  }
+  [tooltip]::before {
+    content: '';
+    border: 4px solid transparent; 
+    z-index: 1001; 
+  }
+  [tooltip]::after {
+    content: attr(tooltip); 
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    min-width: 10em;
+    max-width: 21em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 1ch 1.5ch;
+    border-radius: 10px;
+    background: transparent;
+    color: rgb(1, 51, 126);
+    z-index: 1000;
+    animation-name:	flecha;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  [tooltip]:hover::before,
+  [tooltip]:hover::after {
+    display: block;
+  }
+  [tooltip='']::before,
+  [tooltip='']::after {
+    display: none !important;
+  }
+  [tooltip][flow^="right"]::before {
+    top: 50%;
+    border-left-width: 0;
+    border-right-color: rgb(1, 51, 126);
+    right: calc(0em - 20px);
+    transform: translate(.5em, -50%);
+    animation-name:	flecha;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate
+  }
+  [tooltip][flow^="right"]::after {
+    top: 50%;
+    left: calc(100% + 5px);
+    transform: translate(.5em, -50%);
+  }
+  @keyframes flecha {
+    from {
+      transform: translate(35px, -50%);
+      }
+    to {
+        transform: translate(20px, -50%);
+    }
+  }
+  /*FIN TOOLTIP*/
 
+/* FIN SOBRE MI */
+
+
+/* CONTAINER HEADER */
 .container {
-    width: 85%;
-    max-width: 1200px;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: auto;
-}
-
-img {
-    display: block;
-    height: 450px;
-    object-fit: cover;
-    animation: arriba 1s ease-in;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: auto 5px auto 5px;
+    text-align: center;
 }
 
 .textos {
-    width: 50%;
-    color: white;
+    color: rgb(248, 248, 248);
     
 }
+.textos h1 {
+    font-size: 2.5rem;
+    line-height: 50px;
+    animation: moverDerecha 1s ease-in;
+    text-shadow: 1px 1px 1px rgba(0,71,127,0.4); 
+}
 
-.botones-redes{
+.textos h2 {
+    font-size: 1rem;
+    color: #00477f;
+    margin-top: 10px;
+    animation: moverIzquierda 1s ease-in;
+}
+
+
+#img { /* imagen principal */
+    height: 240px;
+    object-fit: cover;
+    animation: arriba 1s ease-in;
+    margin: 25px auto auto auto;
+}
+
+
+/* FOOTER */
+footer {
+    margin: auto;
+    box-sizing: border-box;
+}
+section {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 85%;
-    margin: auto;
-    margin-top: -30px;
-    
-   
+    flex-direction: column;
+    height: 15vh;
 }
+.linea-footer {
+    
+    height: 2px;
+    border: 2px solid rgba(59, 165, 165, 0.15);    
+}
+.linea-footer:hover {
+    border: 2px solid rgba(126, 163, 91, 0.65); 
+}
+
+.container-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -20px auto auto auto;
+    box-sizing: border-box;
+}
+.container-btn a img{
+    height: 40px;
+    width: 40px;
+}
+.container-btn a img:hover{
+    height: 43px;
+    width: 43px;
+}
+.container-btn a img:hover{
+    height: 43px;
+    width: 43px;
+}
+
 .row-icon{
     display: flex;
     justify-content: center;
@@ -80,68 +214,50 @@ img {
     height: 70px;  
 }
 .img-container {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+.img-container:last-child {
+    margin-right: 0px;;
+}
+
+.mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    text-align: center;
+}
+.mail-container {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.botones-redes a img{
-   
-    height: 40px;
-    width: 40px;
-}
-.botones-redes a img:hover{
-    height: 45px;
-    width: 45px;
-}
-.row-relleno {
-    width: 200;
-}
-.mail {
-    display: flex;
-    justify-content: center;
+    margin-top: -10px;
 }
 
 .mail img {
     height: 30px;
     margin-right: 7px;
     animation: arriba 1s ease-in;
+    text-align: center;
 }
 
-.mail p {
+.mail a {
     color: #00477f;
     font-size: 19px;
     font-weight: 700;
     animation: arriba 1s ease-in;
-}
-
-.textos h1 {
-    font-size: 60px;
-    animation: moverDerecha 1s ease-in;
-    text-shadow: 1px 1px 1px rgba(0,71,127,0.4); 
-}
-
-.textos h2 {
-    font-size: 20px;
-    color: #00477f;
-    margin-top: 20px;
-    animation: moverIzquierda 1s ease-in;
+    text-align: center;
+    text-decoration: none;
 }
 
 
-.wave {
-    height: 90px;
-    z-index: -1 !important;
-    width: 100%;
-    background: #a8ff78;
-    background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);
-    background: linear-gradient(to right, #78ffd6, #a8ff78);
-}
-.wave path {
-    z-index: -1;
-}
 
 .enlaces {
     position: fixed;
@@ -214,13 +330,6 @@ img {
     font-size: 23px;
 }
 
-.proyect {
-    width: 150px;
-    height: 40px;
-    color: white;
-    background-color: #00477f;
-    color: white;
-}
 
 @keyframes moverIzquierda {
     0% {
@@ -254,7 +363,7 @@ img {
         transform: translate(0);
     }
 }
-
+/*
 @media screen and (max-width: 1000px) {
     img {
         height: 400px;
@@ -494,6 +603,12 @@ img {
 }
 
 @media screen and (max-width: 340px) {
+    header {
+
+        padding: 0px;
+        width: 100%;
+        height: 80vh;
+    }
     img {
         height: 260px;
     }
@@ -569,105 +684,13 @@ img {
 }
 /* BOTON Proyecto */
 
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 15px 40px;
-    display: inline-block;
-    border-radius: 100px;
-    transition: all 0.2s;
-    position: absolute;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn-white {
-    background-color: #fff;
-    color: #777;
-}
-
-.btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all 0.4s;
-}
-
-.btn-white::after {
-    background-color: #fff;
-}
-
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
-
-.btn-animated {
-    animation: moveOut 5s ease-out;
-    animation-fill-mode: backwards;
-}
-
-@keyframes moveOut {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
-.btn::after {
-    content: "";
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    border: 6px solid #fff;
-    position: absolute;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: ring 1.5s infinite;
-}
-
-.btn:hover::after,
-.btn:focus::after {
-    animation: none;
-    display: none;
-}
-
-@keyframes ring {
-    0% {
-        width: 20px;
-        height: 20px;
-        opacity: 1;
-    }
-    100% {
-        width: 200px;
-        height: 200px;
-        opacity: 0;
-    }
-}
 
 
 /* FIN BOTON Proyecto */
 
 
+/* FOOTER */
 
+
+
+/* FIN FOOTER */
