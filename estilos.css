@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-size: 62,5% (1rem = 10px);
 }
-
 body {
     font-family: "Open Sans", sans-serif;
     font-size: 62,5% (1rem = 10px);
@@ -16,30 +15,28 @@ body {
 header {
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
     margin: auto;
 }
-
 /* SOBRE MI */
 nav {
     display: flex;
     align-items: center;
     justify-content: start;
     height: 40px;
+    margin: 0;
     /*background: linear-gradient(to right,  #98cf8a, #33a89e);*/
 }
-
 nav a {
     color: white;
     text-decoration: none;
 }
 .sticky {
     position: fixed;
-    top: 5px;
-    
+    top: 5px;   
   }
 .sobreMi {
     /*display: block;*/
@@ -48,16 +45,22 @@ nav a {
     z-index: 1;
     animation: moverIzquierda 1s ease-in;
 }
-
 .btn-sobremi {
  padding: 0.3rem 1rem 0.3rem 1rem !important;
  border: 0.1rem solid rgba(71, 160, 152, 0.2); 
  border-radius: 2rem;
- font-size: 1rem;
- background:rgba(112,188,154,0.2);
+ font-size: 0.93rem;
+ margin: 10px 0 0 5px;
+ box-shadow: 0px 0px 31px -1px rgba(0,0,0,0.2);
 }
-
-
+.btn-sobremi:hover{
+    box-shadow: 0px 0px 35px -1px rgba(0,0,0,0.1);
+    font-size: 1.02rem;
+}
+.btn-sobremi:active {
+    font-size: 0.95rem;
+    box-shadow: 0px 0px 35px -1px rgba(0,0,0,0.1);
+}
 /* TOOLTIP */
 [tooltip] {
     position: relative;
@@ -106,7 +109,6 @@ nav a {
   [tooltip='']::before,
   [tooltip='']::after {
     display: none !important;
-   
   }
   [tooltip][flow^="right"]::before {
     top: 50%;
@@ -136,25 +138,29 @@ nav a {
     }
   }
   /*FIN TOOLTIP*/
-
   /* SOBRE MI POPUP */
-  .enlaces {
-    position: fixed;
+  .sobre-mi {
     display: flex;
-    top: 0;
-    background: black;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;   
+}
+.enlaces {
+    position: fixed;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
     height: 100vh;
     right: 0;
-    flex-direction: column;
+    top: 0;
     width: 100%;
     transition: all 1s ease;
     background: #1d976c;
     background: -webkit-linear-gradient(to right, #93f9b9, #1d976c);
-    background: linear-gradient(to right, #93f9b9, #1d976c);
+    background: linear-gradient(to right, #93f9b9, #98cf8a,);
 }
-
 .uno {
     -webkit-clip-path: circle(0% at 00);
     clip-path: circle(0% at 0 0);
@@ -164,52 +170,138 @@ nav a {
     -webkit-clip-path: circle(150% at 00);
     clip-path: circle(150% at 00);
 }
-
-.sobre-mi {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
 .lolita {
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    margin-right: 50px;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 10px;
+    transition: linear 0.2s;
 }
-
 .txt-sobre-mi {
     text-align: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-
-.txt-sobre-mi h1 {
-    color: #00477f;
-    font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-    font-size: 40px;
-}
-
 .txt-sobre-mi p {
-    color: white;
+    color: rgb(245, 245, 245);
     font-family: "Jost", sans-serif;
-    font-size: 20px;
-    margin-bottom: 70px;
-    padding: 20px;
-    
-    text-shadow: 1px 2px 1px rgba(0,71,127,0.4); }
+    font-size: 0.83rem;
+    text-shadow: 1px 1px 1px rgba(0,71,127,0.4);
+    margin: 0 10px 0 5px;
+    transition: linear 0.2s;    
+}
+.contenedor-descarga{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-top: 10px ;
+}
+.contenedor-cv{
+    width: 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px; 
+}
+.contenedor-cv img{
+    width: 100%;
+}
+.contenedor-cv a{
+    font-size: 0.6rem;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0,71,127,0.4);
+}
+#cv-color {
+    color: rgb(10, 10, 10);
+    font-size: .8rem;
+}
+@media (min-width: 768px){
+    .sobre-mi {
+        flex-direction: row;   
+    }
+    .enlaces {
+        justify-content: center;
+        align-items: center;
+    }
+    .lolita {
+        width: 200px;
+        height: 200px;
+        margin: auto 30px auto 100px;
+    }
+    .txt-sobre-mi {
+        flex-direction: row;
+    }
+    .txt-sobre-mi p {
+        font-size: 0.9rem;
+        margin: 0 100px 0 5px;
 
-.txt-sobre-mi a {
-    font-family: "Open Sans", sans-serif;
-    font-size: 23px;
+    }
+    .btn-descarga{
+        height: 30px;
+        padding: 0.5rem 1.4rem 0.5rem 1.4rem;
+    }
+    .btn-descarga:active {
+        bottom: 13px;
+    }
+    #cv-color {
+        color: rgb(10, 10, 10);
+        font-size: .8rem;
+    }
+    .contenedor-descarga {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100vw;
+        height: 30vh;
+        margin: 0;
+    }
+    .contenedor-cv{
+        width: 100px;
+    }
+    .contenedor-cv a{
+        font-size: 1rem;
+    }
+}
+@media (min-width: 992px) {
+    .lolita {
+        width: 300px;
+        height: 300px;
+        margin: auto 40px auto 100px;
+    }
+    .txt-sobre-mi p {
+        font-size: 1.2rem;
+        margin: 0 100px 0 5px;
+    }
+    .btn-descarga{
+        height: 30px;
+        padding: 0.5rem 1.4rem 0.5rem 1.4rem;
+    }
+    .btn-descarga:active {
+        bottom: 13px;
+    }
+    #cv-color {
+        color: rgb(10, 10, 10);
+        font-size: .8rem;
+    }
+    .contenedor-descarga {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100vw;
+        height: 30vh;
+        margin: 0;
+    }
+    .contenedor-cv{
+        width: 100px;
+    }
+    .contenedor-cv a{
+        font-size: 1rem;
+    }
 }
   /* FIN SOBRE MI POPUP */
 /* FIN SOBRE MI */
-
-
 /* CONTAINER HEADER */
 .container {
     width: 100%;
@@ -223,8 +315,7 @@ nav a {
     
 }
 .textos {
-    color: rgb(248, 248, 248);
-    
+    color: rgb(248, 248, 248);  
 }
 .textos h1 {
     font-size: 2.5rem;
@@ -232,24 +323,45 @@ nav a {
     animation: moverDerecha 1s ease-in;
     text-shadow: 1px 1px 1px rgba(0,71,127,0.4); 
 }
-
 .textos h2 {
     font-size: 1rem;
     color: #00477f;
     margin-top: 10px;
     animation: moverIzquierda 1s ease-in;
 }
-
-
 #img { /* imagen principal */
-    height: 240px;
+    height: 100%;
     object-fit: cover;
     animation: moverDerecha 1s ease-in;
     margin: auto;
     z-index: -1;
 }
-
-
+.contenedor-img {
+    height: 240px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.contenedor-img:active {
+    height: 235px;
+}
+@media (min-width: 768px){
+    .container {
+        flex-direction: row !important;
+        max-height: 768px;
+    }
+    .textos h1{
+        font-size: 4.3rem;
+        line-height: 80px;
+    }
+    .textos h2 {
+        font-size: 2rem;
+        margin-top: 30px;
+    }
+    .contenedor-img {
+        height: 450px;
+        padding: 10px;
+    }  
+}
 /* FOOTER */
 footer {
     box-sizing: border-box;
@@ -259,6 +371,11 @@ footer {
     align-items: center;
     flex-direction: column;
 }
+footer p {
+    color: rgb(252, 252, 252);
+    text-shadow: 1px 1px 1px rgba(0,71,127,0.4); 
+    font-weight: 700;
+}
 section {
     display: flex;
     justify-content: center;
@@ -266,8 +383,6 @@ section {
     flex-direction: column;
     height: 100%;
 }
-
-
 .container-btn{
     display: flex;
     justify-content: center;
@@ -291,6 +406,10 @@ section {
     width: 38px;
     transition: 0.1s ease;
 }
+
+/* TOOLTIP para ICONO GITHUB */
+
+/*FIN TOOLTIP para ICONO GITHUB */
 
 .row-icon{
     display: flex;
@@ -317,8 +436,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-  
     text-align: center;
+
 }
 .mail-container {
     width: 100%;
@@ -329,8 +448,12 @@ section {
     border-top: 1px solid rgba(40, 70, 110, 0.15);
     margin-top: 10px;
     animation: arriba 1s ease-in;
+    
 }
-
+#mail-color{
+color:rgb(245, 245, 245);
+text-shadow: 1px 1px 1px rgba(0,71,127,0.4); 
+}
 .mail img {
     height: 30px;
     margin-right: 7px;
@@ -345,12 +468,6 @@ section {
     text-align: center;
     text-decoration: none;
 }
-
-
-
-
-
-
 @keyframes moverIzquierda {
     0% {
         opacity: o;
@@ -383,334 +500,3 @@ section {
         transform: translate(0);
     }
 }
-/*
-@media screen and (max-width: 1000px) {
-    img {
-        height: 400px;
-    }
-    .texto {
-        margin-right: 30px;
-    }
-    .textos h1 {
-        font-size: 50px;
-    }
-    .textos h2 {
-        font-size: 20px;
-    }
-    .txt-sobre-mi h1 {
-        font-size: 30px;
-    }
-    .txt-sobre-mi p {
-        font-size: 21px;
-        margin: 0 5px 0 5px;
-        padding: 0;
-        width: auto;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    img {
-        height: 320px;
-    }
-    .textos h1 {
-        font-size: 43px;
-    }
-    .textos h2 {
-        font-size: 15px;
-    }
-    .botones-redes{ 
-        margin-top: 20px;
-    }
-    .sobre-mi {
-        flex-direction: column;
-        margin-left: 0;
-        margin-bottom: 0;
-        display: flex;
-        justify-content: center;
-
-    }
-    .lolita {
-        width: 300px;
-        height: 300px;
-        margin-right: 0;
-        margin-top: -40px;
-        margin-bottom: 2px;
-    }
-    .txt-sobre-mi h1 {
-        font-size: 31px;
-    }
-    .txt-sobre-mi p {
-        font-size: 22px;
-        margin: 0 5px 0 5px;
-        padding: 0;
-        width: auto;
-    }
-    .txt-sobre-mi .btn-proyecto-contenedor {
-        text-align: start;
-        margin-top: 5px;
-        margin-left: 80px;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .container {
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-    img {
-        height: 230px;
-    }
-    .textos {
-        width: 100%;
-        text-align: center;
-    }
-    .textos h1 {
-        font-size: 35px;
-    }
-    .textos h2 {
-        font-size: 25px;
-    }
-    .icono {
-        font-size: 20px;
-    }
-    .botones-redes{ 
-        margin-top: 15px;
-    }
-    .botones-redes a {
-        margin-right: 40px;
-    }
-    .mail img {
-        height: 10px;
-        margin-right: 7px;
-    }
-    
-    .mail p {
-        font-size: 14px;
-    }
-    .row-icon {
-        height: 50px;
-    }
-    .botones-redes {
-        margin-top: -25px;
-    }
-    .botones-redes a img{
-        height: 30px;
-        width: 30px;
-    }
-    .sobre-mi {
-        flex-direction: column;
-        margin-left: 0;
-        margin-bottom: 0;
-        display: flex;
-        justify-content: center;
-
-    }
-    .lolita {
-        width: 245px;
-        height: 245px;
-        margin-right: 0;
-        margin-top: -40px;
-        margin-bottom: 2px;
-    }
-    .txt-sobre-mi h1 {
-        font-size: 31px;
-    }
-    .txt-sobre-mi p {
-        font-size: 22px;
-        margin: 0 5px 0 5px;
-        padding: 0;
-        width: auto;
-    }
-    .txt-sobre-mi .btn-proyecto-contenedor {
-        text-align: start;
-        margin-top: 5px;
-        margin-left: 80px;
-    }
-
-}
-
-@media screen and (max-width: 360px) {
-    .container {
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .textos {
-        width: 100%;
-        text-align: center;
-    }
-    .textos h1 {
-        font-size: 40px;
-        margin-top: 12px;
-    }
-    .textos h2 {
-        font-size: 25px;
-    }
-    .icono {
-        font-size: 20px;
-    }
-    .container h1 {
-        line-height: 40px;
-    }
-    .img {
-        height: 260px;
-    }
-    .botones-redes a {
-        margin-right: 25px;
-    }
-    .botones-redes a img:hover{
-        height: 0px;
-        width: 0px;
-    }
-    .botones-redes a img:active{
-        height: 35px;
-        width: 35px;
-    }
-    .mail {
-        margin-top: 10px;
-    }
-    .mail img {
-        height: 20px;
-        margin-right: 7px;
-    }
-    
-    .mail p {
-        font-size: 14px;
-    }
-    .row-icon {
-        height: 50px;
-    }
-    .botones-redes {
-        margin-top: -5px;
-    }
-    .botones-redes a img{
-        height: 30px;
-        width: 30px;
-    }
-    .sobre-mi {
-        flex-direction: column;
-        margin-left: 0;
-        margin-bottom: 0;
-        display: flex;
-        justify-content: center;
-
-    }
-    .lolita {
-        width: 200px;
-        height: 200px;
-        margin-right: 0;
-        margin-top: -40px;
-        margin-bottom: 5px;
-    }
-    .txt-sobre-mi h1 {
-        font-size: 28px;
-    }
-    .txt-sobre-mi p {
-        font-size: 21px;
-        margin: 0 5px 0 5px;
-        padding: 0;
-        width: auto;
-    }
-    .txt-sobre-mi .btn-proyecto-contenedor {
-        text-align: start;
-        margin-top: 10px;
-        margin-left: 65px;
-    }
-
- 
-}
-
-@media screen and (max-width: 340px) {
-    header {
-
-        padding: 0px;
-        width: 100%;
-        height: 80vh;
-    }
-    img {
-        height: 260px;
-    }
-    .textos h1 {
-        font-size: 30px;
-        margin-top: 10px;
-    }
-    .textos a {
-        width: 100px;
-    }
-    .textos h2 {
-        font-size: 20px;
-    }
-    .icono {
-        font-size: 17px;
-    }
-    .botones-redes a {
-        margin-right: 25px;
-    }
-    .botones-redes a img:active{
-        height: 35px;
-        width: 35px;
-    }
-    .mail img {
-        height: 20px;
-        margin-right: 7px;
-    }
-    
-    .mail p {
-        font-size: 14px;
-    }
-    .row-icon {
-        height: 50px;
-    }
-    .botones-redes {
-        margin-top: -25px;
-    }
-    .botones-redes a img{
-        height: 30px;
-        width: 30px;
-    }
-
-    .sobre-mi {
-        flex-direction: column;
-        margin-left: 0;
-        margin-bottom: 0;
-        display: flex;
-        justify-content: center;
-
-    }
-    .lolita {
-        width: 150px;
-        height: 150px;
-        margin-right: 0;
-        margin-top: -40px;
-    }
-    .txt-sobre-mi h1 {
-        font-size: 25px;
-    }
-    .txt-sobre-mi p {
-        font-size: 20px;
-        margin: 0 5px 0 5px;
-        padding: 0;
-        width: auto;
-    }
-    .txt-sobre-mi .btn-proyecto-contenedor {
-        text-align: start;
-        margin-top: 10px;
-        margin-left: 40px;
-    }
-
-
-}
-/* BOTON Proyecto */
-
-
-
-/* FIN BOTON Proyecto */
-
-
-/* FOOTER */
-
-
-
-/* FIN FOOTER */
